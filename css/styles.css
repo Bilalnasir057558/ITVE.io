@@ -8,6 +8,8 @@
     --blue: #2257c1;
     --sea-green: #2eb1ae;
     --orange: #f99e1f;
+    --light-blue: #E8EEF9;
+    --light-green: #D5F1EE;
 }
 
 main {
@@ -20,7 +22,7 @@ main {
     margin-top: -7px;
 }
 
-.hero {
+#hero {
     min-height: 90vh;
     overflow: hidden;
     display: flex;
@@ -34,17 +36,17 @@ main {
         var(--sea-green)
     );
 }
-.hero .container {
+#hero .container {
     max-width: 800px;
     text-align: center;
     color: white;
 }
-.hero h1 {
+#hero h1 {
     font-size: clamp(2.5rem, 5vw, 5rem);
     line-height: 1.2;
     margin-bottom: 2rem;
 }
-.hero span {
+#hero span {
     color: var(--orange);
 }
 
@@ -88,6 +90,13 @@ main {
   background: rgba(255, 255, 255, 0.15);
   border-color: #ffffff;
 }
+.btn-hero i {
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+.btn-hero:hover i {
+    transform: translateX(4px);
+}
 
 .hero-facts-container {
     display: flex;
@@ -104,6 +113,186 @@ main {
     color: var(--orange);
 }
 
+/* About Section  */
+#about-section {
+    background-color: #F9FAFB;
+    display: flex;
+    flex-direction: row;
+    padding: 70px 40px;
+    gap: 70px;
+}
+.text-container, .icon-container {
+    width: 50%;
+}
+.section-btn {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor:auto;
+}
+#about-section-btn, #courses-section-btn {
+    background-color: #E3EAF5;
+    color: var(--blue);
+}
+
+.text-container h2, #courses-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 30px 0;
+}
+.text-container h2 span, #courses-section h2 span {
+    color: var(--blue);
+}
+
+.text-container p {
+    margin-bottom: 30px;
+}
+.about-us-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.about-us-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    width: 330px;
+    height: 250px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid rgb(219, 219, 219);
+    transition: all 0.3s ease;
+    box-shadow: 2px 4px 8px rgba(92, 90, 90, 0.1);
+}
+.about-us-card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 8px 16px rgba(92, 90, 90, 0.1);
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    padding: 10px;
+    border-radius: 10px;
+}   
+
+.icon i {
+    font-size: 24px;
+}
+.mission-card .icon {
+    background-color: var(--light-blue);
+}
+
+.vision-card .icon {
+    background-color: var(--light-green);
+}
+.mission-card i {
+    color: var(--blue);
+}
+.vision-card i {
+    color: var(--sea-green);
+}
+
+.about-card-heading {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.about-card-para {
+    font-size: 16px;
+    color: gray;
+} 
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(
+        135deg, 
+        var(--blue),
+        var(--sea-green)
+    );
+    border-radius: 20px;
+    height: 600px;
+}
+.icon-container .img-card {
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    box-shadow: 2px 4px 8px rgba(92, 90, 90, 0.1);
+    color: rgb(71, 70, 70);
+    line-height: 0.5;
+}
+.icon-container i {
+    font-size: 100px;
+    color: white;
+    margin-bottom: 20px;
+}
+.icon-container h2 {
+    color: white;
+}
+#first-img-card {
+    left: -20px;
+    bottom: -10px;
+}
+#second-img-card {
+    top: -20px;
+    right: -10px;
+}
+
+#first-img-card h3 {
+    color: var(--blue);
+}
+#second-img-card h3 {
+    color: var(--sea-green);
+}
+
+/* Courses Section  */
+#courses-section {
+    background-color: #F5F7F8;
+}
+#courses-section .card {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.15);
+    transform: scale(1.03);
+}
+@media (max-width: 1024px) {
+    #about-section {
+        flex-direction: column;
+    }
+    .text-container, .icon-container {
+        width: 100%;
+    }
+    .about-us-cards{
+        justify-content: center;
+    }
+    
+}
+@media (max-width: 756px) {
+    .about-us-cards {
+        flex-direction: column;
+    }
+    .about-us-card {
+        width: 100%;
+        height: 230px;
+    }
+}
+
 @media (max-width: 576px) {
     .hero .container {
         max-width: 600px;
@@ -117,6 +306,9 @@ main {
     }
     .btn-hero {
         width: 100%;
+    }
+    .icon-container {
+        height: 400px;
     }
     
 }
