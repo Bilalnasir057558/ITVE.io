@@ -12,8 +12,8 @@ The goal of this project was to create a professional, visually engaging, and us
 
 ## Live Preview
 
-Live Site: 
-GitHub Repository: 
+Live Site: https://bilalnasir057558.github.io/ITVE.io/
+GitHub Repository: https://github.com/Bilalnasir057558/ITVE.io/
 
 ## Tech Stack Used
 
