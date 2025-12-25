@@ -4,7 +4,7 @@
 This project is a modern, responsive redesign of the Institutes of Technical & Vocational Education (ITVE) landing website.
 The goal of this project was to create a professional, visually engaging, and user-friendly landing experience that clearly communicates:
 
--What ITVE is
+###What ITVE is
 -The programs it offers
 -Why students should choose ITVE
 -Clear calls to action (Apply / Explore Courses)
@@ -39,6 +39,7 @@ Bootstrap’s grid system and custom media queries ensure a smooth experience ac
 The website includes section-based scroll pagination using interactive navigation dots on the right side of the screen.
 
 **How it works**
+
 Each dot represents a section of the landing page:
 -Hero
 -About
@@ -104,14 +105,23 @@ or
 Use Live Server in VS Code for best experience
 
 ## Folder Structure
+
 /css
+
    styles.css
+   
 /js
+
    script.js
+   
 /images
+
    user1.jpeg
+   
    user2.jpeg
+   
    logo.jpg
+   
 index.html
 README.md
 
