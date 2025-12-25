@@ -10,6 +10,7 @@
     --orange: #f99e1f;
     --light-blue: #E8EEF9;
     --light-green: #D5F1EE;
+    --light-orange: #FEECD2;
 }
 
 main {
@@ -121,7 +122,7 @@ main {
     padding: 70px 40px;
     gap: 70px;
 }
-.text-container, .icon-container {
+.text-container, .icon-container, .card-container {
     width: 50%;
 }
 .section-btn {
@@ -268,19 +269,116 @@ main {
     transition: all 0.3s ease;
 }
 .card:hover {
-    box-shadow: 2px 4px 8px rgba(255, 255, 255, 0.15);
-    transform: scale(1.03);
+    box-shadow: 0 0 6px 12px rgba(188, 186, 186, 0.15);
+    transform: scale(1.03);  
+}
+.course-card-heading {
+    font-size: 16px;
+}
+.card-text {
+    font-size: 14px;
+    color: rgb(71, 70, 70);
+}
+.card:hover .course-card-heading {
+    color: var(--blue);
+}
+.icon-blue {
+    color: var(--blue);
+    background-color: var(--light-blue);
+}
+.icon-green {
+    color: var(--sea-green);
+    background-color: var(--light-green);
+}
+.icon-orange {
+    color: var(--orange);
+    background-color: var(--light-orange);
+}
+#courses-cta {
+    display: block;
+    width: 190px;
+    margin: 0 auto;
+}
+#courses-cta-arrow {
+    transition: all 0.3s ease;
+    margin-right: 8px;
+}
+#courses-cta:hover {
+    box-shadow: 0 0 8px 16px rgba(203, 202, 202, 0.15);
+}
+#courses-cta:hover #courses-cta-arrow {
+    transform: translateX(4px);
+}
+
+/* why section  */
+#why-choose-section {
+    display: flex;
+    padding: 70px 40px;
+    background-color: #F9FAFB;
+    gap: 70px;
+}
+#why-section-btn {
+    color: var(--sea-green);
+    background-color: var(--light-green);
+}
+#why-choose-section .text-container {
+    margin-top: 100px;
+}
+.placement-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background-color: var(--light-blue);
+    border-radius: 20px;
+    padding: 15px 25px;
+}
+
+.placement-card::before {
+    content: "";
+    position: absolute;
+    background-color: #D2E9EC;
+    bottom: 30px;
+    right: 90px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 0;
+}
+.placement-card::after {
+    content: "";
+    position: absolute;
+    background-color: #D1E2EF;
+    bottom: -20px;
+    right: -20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    z-index: 0;
+}
+.placement-card h1 {
+    color: var(--blue);
+}
+.placement-text-2 {
+    font-size: 14px;
+    color: rgb(71, 70, 70)
+}
+#why-choose-section .card:hover {
+    
 }
 @media (max-width: 1024px) {
-    #about-section {
+    #about-section, #why-choose-section {
         flex-direction: column;
     }
-    .text-container, .icon-container {
+    .text-container, .icon-container, .card-container {
         width: 100%;
     }
     .about-us-cards{
         justify-content: center;
     }
+    #why-choose-section .text-container {
+    margin-top: 0;
+}
     
 }
 @media (max-width: 756px) {
@@ -310,5 +408,4 @@ main {
     .icon-container {
         height: 400px;
     }
-    
 }
